@@ -8,13 +8,14 @@ colorBox.addEventListener("mouseover", function () {
 colorBox.addEventListener("mouseout", function () {
   colorBox.style.backgroundColor = "lightgray";
 });
+//Task 6
 const inputField = document.getElementById("inputField");
 const output = document.getElementById("output");
 
 inputField.addEventListener("keyup", function () {
   output.textContent = inputField.value;
 });
-
+//Task 7
 const form = document.getElementById("form1");
 const nameField = document.getElementById("name");
 const emailField = document.getElementById("email");

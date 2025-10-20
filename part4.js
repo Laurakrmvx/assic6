@@ -1,13 +1,11 @@
-let tasks = []; // To store the tasks
+let tasks = [];
 
-// DOM elements
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
-// Function to render tasks
 function renderTasks() {
-  taskList.innerHTML = ""; // Clear the current list
+  taskList.innerHTML = "";
   tasks.forEach((task, index) => {
     const li = document.createElement("li");
     li.className = task.completed ? "completed" : "";
@@ -20,32 +18,26 @@ function renderTasks() {
   });
 }
 
-// Add a new task
 function addTask() {
   const taskText = taskInput.value.trim();
   if (taskText !== "") {
     tasks.push({ text: taskText, completed: false });
-    taskInput.value = ""; // Clear input field
+    taskInput.value = "";
     renderTasks();
   }
 }
 
-// Toggle task completion
 function toggleTaskCompletion(index) {
   tasks[index].completed = !tasks[index].completed;
   renderTasks();
 }
 
-// Delete task
 function deleteTask(index) {
-  tasks.splice(index, 1); // Remove task from the array
+  tasks.splice(index, 1);
   renderTasks();
 }
 
-// Event listener for adding a task
 addTaskBtn.addEventListener("click", addTask);
-
-// Allow pressing 'Enter' to add a task
 taskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     addTask();

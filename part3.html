@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Part 3| Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Assignment 6</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="part1.html">Introduction to JavaScript</a>
+          </li>
+          <li><a href="part2.html">DOM Manipulation</a></li>
+          <li><a href="part3.html" class="active">Events</a></li>
+          <li>
+            <a href="part4.html">Mini Project Interactive To-Do List</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Task 5: Mouse Events</h1>
+    <div id="colorBox" class="box"></div>
+
+    <h1>Task 6: Keyboard Events</h1>
+    <label for="inputField">Type something:</label>
+    <input type="text" id="inputField" placeholder="Start typing..." />
+
+    <p>Current value: <span id="output"></span></p>
+
+    <h1>Task 7: Form Validation</h1>
+    <form id="form1">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" />
+      </div>
+      <button type="submit">Submit</button>
+      <p id="error" style="color: red; display: none">
+        All fields are required!
+      </p>
+    </form>
+
+    <script src="part3.js" defer></script>
+  </body>
+</html>
